@@ -1,14 +1,16 @@
-h1, h2, h3, h4, h5, h6 {
+body{
   color: #444444;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Volkhov', sans-serif;
 }
 
-a {
-  color: #444444;
-  font-family: 'Open Sans', sans-serif;
-  }
+h1 {
+  font-size: 3vw;
+}
 
-
+p {
+  text-align: justify;
+  font-size: 2vw;
+}
 .container-fluid{
   padding: 0;
 }
@@ -18,9 +20,8 @@ a {
   max-width: 100px;
   margins: 0;
 }
-/********************************/
-/*            Overlay           */
-/********************************/
+
+/* Dark Carousel Overlay */
 .carousel-item:after {
   content:"";
   display:block;
@@ -32,10 +33,19 @@ a {
   background:rgba(0,0,0,0.5);
 }
 
+/* Carousel Text Positioning */
+.carousel-caption {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
 
 .slider-font {
   color: #fff;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Volkhov', sans-serif;
 }
 
 h1.slider-font {
@@ -46,37 +56,39 @@ h3.slider-font {
   font-size: 2vw;
 }
 
-.carousel-caption {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
-
-}
 
 .item {
-    -webkit-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   transform-style: preserve-3d;
   }
 
 
+.mid-section {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: auto;
+  padding: 3.5%;
+}
+
+
+
+
 @media (max-width: 600px){
   h1.slider-font{
   margin-bottom:0px;
-  }
+}
 
   .carousel-indicators{
   opacity: 0;
-  }
+}
 
   .carousel-caption{
   top: 40%;
-  }
+}
 
   .thumbnail {
   max-width: 75px;
-  }
+}
 }
