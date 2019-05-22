@@ -17,8 +17,10 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include, url
 from marketing.views import HomePage
+from apply import views as apply_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', HomePage.as_view())
+    path('apply/', apply_views.apply, name='apply'),
+    path('', HomePage.as_view(), name='home-page')
 ]

@@ -16,6 +16,10 @@ p {
 }
 
 
+div{
+  background-color: #f9
+}
+
 .thumbnail {
   max-width: 100px;
   margins: 0;
