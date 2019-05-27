@@ -12,7 +12,7 @@ p {
   font-size: 2vw;
 }
 .container-fluid{
-  padding: 0;
+  padding: 10px;
 }
 
 
@@ -69,6 +69,7 @@ h3.slider-font {
 
 
 .mid-section {
+  display:flex;
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -76,8 +77,9 @@ h3.slider-font {
   padding: 3.5%;
 }
 
-
-
+.block-2 {
+  background-color: #FFF;
+}
 
 @media (max-width: 600px){
   h1.slider-font{

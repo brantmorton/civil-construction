@@ -22,7 +22,7 @@
 <body>
     <!-- Navbar -->
   <nav class="navbar navbar-expand-sm navbar-light bg-light" >
-      <a href="#" class="navbar-brand">
+      <a href="{% url 'home-page' %}" class="navbar-brand">
           <img src="{% static 'marketing/img/logo.png' %}" alt="Civil Construction" class="thumbnail">
       </a>
       <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-menu">
@@ -31,13 +31,13 @@
       <div class="collapse navbar-collapse" id="navbar-menu">
           <ul class="navbar-nav ml-auto">
               <li class="nav-item">
-                  <a href="#" class="nav-link">About</a>
+                  <a href="" class="nav-link">About</a>
               </li>
               <li class="nav-item">
                   <a href="#" class="nav-link">Projects</a>
               </li>
               <li class="nav-item">
-                  <a href="#" class="nav-link">Apply</a>
+                  <a href="{% url 'apply' %}" class="nav-link">Apply</a>
               </li>
           </ul>
       </div>
