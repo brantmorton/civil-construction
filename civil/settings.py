@@ -25,7 +25,10 @@ SECRET_KEY = os.environ.get('CIVIL_PROJECT_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'e6ac8ae2.ngrok.io',
+    'localhost'
+]
 
 
 # Application definition

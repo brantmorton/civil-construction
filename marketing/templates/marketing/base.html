@@ -2,61 +2,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <link href="https://fonts.googleapis.com/css?family=Volkhov&display=swap" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale="1">
+    <title>Navbar</title>
     <link rel="stylesheet" href="{% static 'marketing/main.css' %}">
-
-    {% if title %}
-        <title>Civil Construction - {{ title }}</title>
-    {% else %}
-        <title>Civil Construction</title>
-    {% endif %}
 </head>
 <body>
-    <!-- Navbar -->
-  <nav class="navbar navbar-expand-sm navbar-light bg-light" >
-      <a href="{% url 'home-page' %}" class="navbar-brand">
-          <img src="{% static 'marketing/img/logo.png' %}" alt="Civil Construction" class="thumbnail">
-      </a>
-      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar-menu">
-         <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbar-menu">
-          <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                  <a href="" class="nav-link">About</a>
-              </li>
-              <li class="nav-item">
-                  <a href="#" class="nav-link">Projects</a>
-              </li>
-              <li class="nav-item">
-                  <a href="{% url 'apply' %}" class="nav-link">Apply</a>
-              </li>
-          </ul>
-      </div>
-  </nav>
-    {% if messages %}
-      {% for message in messages %}
-        <div class="alert alert-{{ message.tags }}">
-            {{ message }}
+    <header>
+        <a href="#">
+            <img class="logo" src="{% static 'marketing/img/logo.png' %}" alt="logo">
+        </a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <a class="apply-btn" href="#"><button>Apply</button></a>
+        <a onclick="OpenNav()" class="menu"><button>Menu</button></a>
+    </header>
+    <div id="mobile-menu" class="overlay">
+        <a class="close" onclick="CloseNav()">&times;</a>
+        <div class="overlay-content">
+            <a href="#about" onclick="CloseNav()">About</a>
+            <a href="#services" onclick="CloseNav()">Services</a>
+            <a href="#contact" onclick="CloseNav()">Contact</a>
+            <a href="#" onclick="CloseNav()">Apply</a>
         </div>
-      {% endfor %}
-    {% endif %}
-    {% block content %}{% endblock %}
+    </div>
+    <script type="text/javascript" src="{% static 'marketing/mobile.js' %}"></script>
 
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+{% block content %}{% endblock %}
 
 </body>
 </html>
