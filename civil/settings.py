@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('CIVIL_PROJECT_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'e6ac8ae2.ngrok.io',
+    '89ae44d9.ngrok.io',
     'localhost'
 ]
 

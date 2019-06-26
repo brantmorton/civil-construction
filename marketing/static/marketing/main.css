@@ -10,11 +10,6 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-body {
-
-}
-
-
 li, a, button {
   font-size: 1.15em;
   color: #edf0f1;
@@ -322,7 +317,7 @@ button:hover {
   text-align: center;
   height:400px;
   width:400px;
-  margin: 5% auto 3em auto;
+  margin: 10% auto 3em auto;
   }
 
 .gmap_canvas {
@@ -362,4 +357,47 @@ button:hover {
   #location-contact-text {
     margin-left: 15%;
   }
+}
+
+/* Apply Form */
+
+body {
+  background-color: #A03333;
+}
+
+#filler {
+  height: 15vh;
+}
+
+#application-form {
+  padding: 15vh 10vw;
+  z-index: 20;
+  background-color: #A03333;
+}
+
+form, .form-group, legend, input, label, .asteriskField {
+  background-color: #A03333;
+  width: 100%;
+}
+
+.form-group > div {
+  background-color: #A03333;
+}
+
+.btn-outline-dark {
+  border-width: 2px;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+legend {
+  font-size: 4rem;
+}
+
+.col-form-label {
+  font-size: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
 }
