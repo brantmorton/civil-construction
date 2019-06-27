@@ -16,11 +16,7 @@
 </head>
 <body>
     <header>
-        {% if title %}
-            <title>Django Blog - {{ title }}</title>
-        {% else %}
-            <title>Django Blog</title>
-        {% endif %}
+        <title>Civil Construction</title>
         <a href="{% url 'home-page' %}">
             <img class="logo" src="{% static 'marketing/img/logo.png' %}" alt="logo">
         </a>
