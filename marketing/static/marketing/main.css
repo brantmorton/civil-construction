@@ -67,6 +67,7 @@ header {
 
 .nav-links {
   list-style: none;
+  margin-bottom: 0;
 }
 
 .nav-links li{
@@ -447,3 +448,49 @@ legend {
   color: #a9a9a9;
 }
 
+#position-select {
+  margin: 0 auto;
+  background-color: #A03333;
+  height: 100vh;
+  text-align: center;
+}
+
+#position-select p {
+  font-size: 3rem;
+  background-color: inherit;
+  margin-top: 10vh;
+}
+
+.app-route-link {
+  font-size: 2.5rem;
+  margin: auto;
+  padding: 1.5rem;
+  border: 1px #24252A solid;
+  background-color: transparent;
+  width: 70%;
+}
+
+#position-select a:hover {
+  color: #a9a9a9;
+}
+
+
+@media (max-width: 450px) {
+  #position-select p {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  legend {
+    font-size: 3rem;
+  }
+
+  #position-select p {
+    font-size: 2.5rem;
+  }
+
+  .app-route-link {
+    font-size: 1.5rem;
+  }
+}

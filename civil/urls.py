@@ -18,9 +18,12 @@ from django.urls import path
 from django.conf.urls import include, url
 from marketing.views import HomePage
 from apply import views as apply_views
+from apply.views import ApplyRoute
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('apply/', apply_views.apply, name='apply'),
+    path('apply/', ApplyRoute.as_view(), name='apply-route'),
+    path('apply/laborer/', apply_views.apply_laborer, name='apply-laborer'),
+    path('apply/operator/', apply_views.apply_operator, name='apply-operator'),
     path('', HomePage.as_view(), name='home-page')
 ]

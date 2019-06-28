@@ -22,21 +22,21 @@
         </a>
         <nav>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="{% url 'home-page' %}#about">About</a></li>
+                <li><a href="{% url 'home-page' %}#services">Services</a></li>
+                <li><a href="{% url 'home-page' %}#contact">Contact</a></li>
             </ul>
         </nav>
-        <a class="apply-btn" href="{% url 'apply' %}"><button>Apply</button></a>
+        <a class="apply-btn" href="{% url 'apply-route' %}"><button>Apply</button></a>
         <a onclick="OpenNav()" class="menu"><button>Menu</button></a>
     </header>
     <div id="mobile-menu" class="overlay">
         <a class="close" onclick="CloseNav()">&times;</a>
         <div class="overlay-content">
-            <a href="#about" onclick="CloseNav()">About</a>
-            <a href="#services" onclick="CloseNav()">Services</a>
-            <a href="#contact" onclick="CloseNav()">Contact</a>
-            <a href="{% url 'apply' %}" onclick="CloseNav()">Apply</a>
+            <a href="{% url 'home-page' %}#about" onclick="CloseNav()">About</a>
+            <a href="{% url 'home-page' %}#services" onclick="CloseNav()">Services</a>
+            <a href="{% url 'home-page' %}#contact" onclick="CloseNav()">Contact</a>
+            <a href="{% url 'apply-route' %}" onclick="CloseNav()">Apply</a>
         </div>
     </div>
     <script type="text/javascript" src="{% static 'marketing/mobile.js' %}"></script>
