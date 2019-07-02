@@ -8,6 +8,7 @@ class Laborer(models.Model):
     email = models.EmailField()
     resume = models.FileField(upload_to='apply/laborer/resume')
     completed_application = models.FileField()
+    date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name
@@ -18,7 +19,9 @@ class Operator(models.Model):
     email = models.EmailField()
     resume = models.FileField(upload_to='apply/operator/resume')
     completed_application = models.FileField()
+    date = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name
+
 

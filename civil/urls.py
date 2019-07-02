@@ -20,13 +20,16 @@ from apply import views as apply_views
 from apply.views import ApplyRoute
 from django.conf import settings
 from django.conf.urls.static import static
+from django.urls import include, path
+from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('apply/', ApplyRoute.as_view(), name='apply-route'),
     path('apply/laborer/', apply_views.apply_laborer, name='apply-laborer'),
     path('apply/operator/', apply_views.apply_operator, name='apply-operator'),
-    path('', HomePage.as_view(), name='home-page')
+    path('', HomePage.as_view(), name='home-page'),
+    url(r'^tinymce/', include('tinymce.urls')),
 ]
 
 if settings.DEBUG is True:

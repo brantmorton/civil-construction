@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'marketing.apps.MarketingConfig',
     'apply.apps.ApplyConfig',
-    'crispy_forms'
+    'crispy_forms',
+    'tinymce'
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

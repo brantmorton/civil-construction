@@ -9,11 +9,7 @@
             <div class="item two-column" id="about">
                 <div id="about-text">
                     <h2 id="about-title">About Us</h2>
-                    <p>Southcorner barbershop was established in 2001. We cater soley to males that are looking for
-                        upscale hair treatments. Out premium services provide men of all ages, that flawless look.</p>
-                    <p>​We offer our clients a wide range of services from straight razor shaving, hair styling,
-                        beard grooming and even eyebrow trimming. Our retro style shop gives men the opportunity to have
-                        their hair treated by professionals that know men's hair.</p>
+                    {{ abouttext.text | safe}}
                 </div>
                 <img id="louisiana-logo" src="{% static 'marketing/img/louisiana-logo.png' %}"
                      alt="louisiana state outline">
