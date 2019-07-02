@@ -1,0 +1,3 @@
+psql -U local_user -h 127.0.0.1 civil_construction
+
+sudo service postgresql start

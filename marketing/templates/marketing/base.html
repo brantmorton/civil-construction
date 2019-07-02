@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width", initial-scale="1">
-    <title>Navbar</title>
+    <title>Civil Construction</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="{% static 'marketing/main.css' %}">
 </head>
 <body>
+{% include 'marketing/messages.html' %}
     <header>
-        <title>Civil Construction</title>
         <a href="{% url 'home-page' %}">
             <img class="logo" src="{% static 'marketing/img/logo.png' %}" alt="logo">
         </a>
@@ -31,7 +31,7 @@
         <a onclick="OpenNav()" class="menu"><button>Menu</button></a>
     </header>
     <div id="mobile-menu" class="overlay">
-        <a class="close" onclick="CloseNav()">&times;</a>
+        <a class="menu-close" onclick="CloseNav()">&times;</a>
         <div class="overlay-content">
             <a href="{% url 'home-page' %}#about" onclick="CloseNav()">About</a>
             <a href="{% url 'home-page' %}#services" onclick="CloseNav()">Services</a>
@@ -40,6 +40,7 @@
         </div>
     </div>
     <script type="text/javascript" src="{% static 'marketing/mobile.js' %}"></script>
+
 
 {% block content %}{% endblock %}
 
@@ -55,5 +56,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
+
 </body>
 </html>

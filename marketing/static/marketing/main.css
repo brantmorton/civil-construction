@@ -155,7 +155,7 @@ button:hover {
   color: #a9a9a9;
 }
 
-.overlay .close {
+.overlay .menu-close {
   position: absolute;
   top: 20px;
   right: 45px;
@@ -163,12 +163,17 @@ button:hover {
   cursor: pointer;
 }
 
+/* The css below fixes the bootstrap x on the menu close */
+a:not([href]):not([tabindex]) {
+    color: #A03333;
+}
+
 @media screen and (max-height: 450px) {
   .overlay a {
     font-size: 20px;
   }
 
-  .overlay, .close {
+  .overlay, .menu-close {
     font-size: 40px;
     top: 15px;
     right: 35px;
@@ -493,4 +498,9 @@ legend {
   .app-route-link {
     font-size: 1.5rem;
   }
+}
+
+/* success message fix */
+.alert {
+  margin: 0;
 }

@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.conf.urls import include, url
 from marketing.views import HomePage
 from apply import views as apply_views
 from apply.views import ApplyRoute
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,3 +28,6 @@ urlpatterns = [
     path('apply/operator/', apply_views.apply_operator, name='apply-operator'),
     path('', HomePage.as_view(), name='home-page')
 ]
+
+if settings.DEBUG is True:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
