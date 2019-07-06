@@ -1,7 +1,6 @@
 from django.views.generic.base import TemplateView
 from marketing.models import AboutText
 from django.shortcuts import render, redirect
-from tinymce.widgets import TinyMCE
 
 
 class HomePage(TemplateView):
@@ -13,3 +12,5 @@ class HomePage(TemplateView):
         args = {'abouttext': abouttext}
 
         return render(request, self.template_name, args)
+
+

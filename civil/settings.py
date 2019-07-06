@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('CIVIL_PROJECT_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '26b71f65.ngrok.io',
+    'cde3adbc.ngrok.io',
     'localhost'
 ]
 
@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'marketing.apps.MarketingConfig',
     'apply.apps.ApplyConfig',
     'crispy_forms',
-    'tinymce'
+    'tinymce',
+    'send'
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -143,5 +144,14 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 MEDIA_URL = '/pvt_media_storage/'
+
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '465'
+EMAIL_HOST_USER = 'brantmort@gmail.com'
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
+
+EMAIL_USE_TLS = False
+EMAIL_USE_SSL = True

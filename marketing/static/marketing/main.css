@@ -504,3 +504,19 @@ legend {
 .alert {
   margin: 0;
 }
+
+/* Thank you page */
+
+#thank_you{
+  height: 100vh;
+  overflow-y: hidden;
+  background-color: #A03333;
+  margin: 15vh auto 0 auto;
+  text-align: center;
+  color: white;
+}
+
+#thank_you p {
+  background-color: #A03333;
+  font-size: 2rem;
+}

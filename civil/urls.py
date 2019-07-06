@@ -14,7 +14,6 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
 from marketing.views import HomePage
 from apply import views as apply_views
 from apply.views import ApplyRoute
@@ -30,6 +29,7 @@ urlpatterns = [
     path('apply/operator/', apply_views.apply_operator, name='apply-operator'),
     path('', HomePage.as_view(), name='home-page'),
     url(r'^tinymce/', include('tinymce.urls')),
+    path('', include('send.urls'))
 ]
 
 if settings.DEBUG is True:
