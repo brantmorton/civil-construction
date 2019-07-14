@@ -13,8 +13,6 @@ class Laborer(models.Model):
     def __str__(self):
         return self.first_name + self.last_name
 
-# need to add file renaming
-
 
 class Operator(models.Model):
     last_name = models.CharField(max_length=100)

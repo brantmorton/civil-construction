@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('CIVIL_PROJECT_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'cde3adbc.ngrok.io',
+    '4d5a078c.ngrok.io',
     'localhost'
 ]
 
@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'apply.apps.ApplyConfig',
     'crispy_forms',
     'tinymce',
-    'send'
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -150,8 +149,8 @@ MEDIA_URL = '/pvt_media_storage/'
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '465'
-EMAIL_HOST_USER = 'brantmort@gmail.com'
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
+EMAIL_HOST_USER = 'ccc.applicant.email@gmail.com'
+EMAIL_HOST_PASSWORD = os.environ.get('CIVIL_EMAIL_PASS')
 
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True

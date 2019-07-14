@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from marketing.views import HomePage
 from apply import views as apply_views
-from apply.views import ApplyRoute
+from apply.views import ApplyRoute, ThankYouPage
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import include, path
@@ -29,7 +29,7 @@ urlpatterns = [
     path('apply/operator/', apply_views.apply_operator, name='apply-operator'),
     path('', HomePage.as_view(), name='home-page'),
     url(r'^tinymce/', include('tinymce.urls')),
-    path('', include('send.urls'))
+    path('thanks/', ThankYouPage.as_view(), name='thank-you')
 ]
 
 if settings.DEBUG is True:

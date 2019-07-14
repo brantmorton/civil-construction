@@ -1,7 +1,4 @@
 To Do:
-    - rename file upon upload
-    - delete 'send' app
-    - add operator email functionality
     - create dedicated email
     - maybe add phone number field
     - deploy
