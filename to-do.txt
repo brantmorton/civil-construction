@@ -1,4 +1,3 @@
 To Do:
-    - create dedicated email
     - maybe add phone number field
     - deploy

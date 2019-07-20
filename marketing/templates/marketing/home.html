@@ -17,29 +17,10 @@
             <div class="item" id="services">
                 <h2 id="services-title">Services</h2>
                 <div class="service" id="service-1">
-                    <h3>Service One</h3>
-                    <ul>
-                        <li>Dirt Work</li>
-                        <li>Leveling</li>
-                        <li>Digging</li>
-                        <li>Environmental</li>
-                    </ul>
+                    {{ servicesblock1.text | safe }}
                 </div>
                 <div class="service" id="service-2">
-                    <h3>Service Two</h3>
-                    <ul>
-                        <li>Contracting</li>
-                        <li>Construction</li>
-                        <li>Project Management</li>
-                    </ul>
-                </div>
-                <div class="service" id="service-3">
-                    <h3>Service Three</h3>
-                    <ul>
-                        <li>Equipment Rental</li>
-                        <li>Consulting</li>
-                        <li>Inspection</li>
-                    </ul>
+                    {{ servicesblock2.text | safe }}
                 </div>
             </div>
             <div class="item" id="contact">

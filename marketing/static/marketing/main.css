@@ -18,7 +18,7 @@ li, a, button {
 
 h2{
   padding: 10px;
-  font-size: 3rem;
+  font-size: 3.5rem;
 }
 
 p {
@@ -261,18 +261,18 @@ a:not([href]):not([tabindex]) {
   grid-area: services;
   display: grid;
   grid-template-areas:
-  "services-title services-title services-title"
-  "service-1      service-2      service-3     ";
-  grid-template-columns: repeat(3, 1fr);
+  "services-title services-title "
+  "service-1      service-2  ";
+  grid-template-columns: repeat(2, 1fr);
   text-align: center;
   background-color: #A03333;
-  padding: 15vh 2em;
-  grid-column-gap: 1.5em;
+  padding: 15vh 3em;
+  grid-column-gap: 8rem;
 }
 
 #services-title {
   grid-area: services-title;
-  margin 0 auto 15px 0;
+  margin: 0 auto 2rem auto;
   height: auto;
   background-color: #A03333;
 }
@@ -282,7 +282,7 @@ a:not([href]):not([tabindex]) {
 }
 
 .service {
-  padding: 10px;
+  padding: 2rem;
   border: 4px #24252A solid;
   border-radius: 10px;
   background-color: #A03333;
@@ -298,10 +298,6 @@ a:not([href]):not([tabindex]) {
   grid-area: service-2;
 }
 
-#service-3 {
-  grid-area: service-3;
-}
-
 
 .service h3{
   display: table;
@@ -314,15 +310,10 @@ a:not([href]):not([tabindex]) {
   border-spacing: 2px;
 }
 
-.service li {
+.service p {
   background-color: #A03333;
-  font-size: 1.5rem;
+  font-size: 2rem;
   padding-bottom: 0.5em;
-}
-
-.service ul {
-  list-style: none;
-  background-color: #A03333;
 }
 
 @media (max-width: 800px) {
@@ -330,8 +321,7 @@ a:not([href]):not([tabindex]) {
   grid-template-areas:
   "services-title"
   "service-1"
-  "service-2"
-  "service-3";
+  "service-2";
   grid-template-columns: auto;
   }
 }
