@@ -11,7 +11,11 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
+import json
 from django.contrib.messages import constants as messages
+
+with open('/etc/config.json') as config_file:
+    config = json.load(config_file)
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,14 +25,13 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('CIVIL_PROJECT_KEY')
+SECRET_KEY = config['SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
-    '4d5a078c.ngrok.io',
-    'localhost'
+    '45.79.35.110',
 ]
 
 
@@ -96,10 +99,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'civil_construction',
-        'USER': 'local_user',
-        'PASSWORD': os.environ.get('DB_PASS'),
+        'USER': 'db_user',
+        'PASSWORD': config['DB_PASSWORD'],
         'HOST': '127.0.0.1',
-        'PORT': '5432'
+        'PORT': ''
     }
 }
 
@@ -140,17 +143,18 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
-MEDIA_URL = '/pvt_media_storage/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '465'
-EMAIL_HOST_USER = 'ccc.applicant.email@gmail.com'
-EMAIL_HOST_PASSWORD = os.environ.get('CIVIL_EMAIL_PASS')
+EMAIL_HOST_USER = config['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = config['EMAIL_HOST_PASSWORD']
 
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True

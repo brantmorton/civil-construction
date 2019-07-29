@@ -1,0 +1,512 @@
+/* General Content Formatting*/
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #24252A;
+  font-family: 'Montserrat', sans-serif;
+}
+
+li, a, button {
+  font-size: 1.15em;
+  color: #edf0f1;
+  text-decoration: none;
+}
+
+h2{
+  padding: 10px;
+  font-size: 3.5rem;
+}
+
+p {
+  padding: 10px;
+  font-size: 1.5rem;
+  line-height: 1.5em;
+}
+
+.two-column {
+  grid-area: about;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+.wrapper {
+  display: grid;
+  min-height: 85vh;
+  grid-template-columns: 1.5em 1fr 1.5em;
+  grid-template-areas:
+  "banner  banner    banner"
+  "......  about     ......"
+  "......  services  ......"
+  "......  contact   ....."
+}
+
+.item {
+  color: #edf0f1;
+  padding: 15vh 10px;
+  min-height: 500px;
+}
+
+/* Navbar */
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 15vh;
+  position: fixed;
+  width: 100%;
+}
+
+.logo {
+  height: 80px;
+}
+
+.nav-links {
+  list-style: none;
+  margin-bottom: 0;
+}
+
+.nav-links li{
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav-links li a {
+  transition: all 0.2s ease 0s;
+}
+
+.nav-links li a:hover {
+  color: #a9a9a9;
+}
+
+.menu {
+  display: none;
+}
+
+button {
+  padding: 7px 25px;
+  background-color: rgba(160, 51, 51, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+button:hover {
+  background-color: rgba(160, 51, 51, 0.8);
+}
+
+@media (max-width: 800px) {
+
+  .nav-links, .apply-btn {
+    display: none;
+  }
+
+  .menu {
+    display: inherit;
+  }
+
+}
+
+@media (min-width: 2000px) {
+  .wrapper {
+    grid-template-columns: 10em 1fr 10em;
+  }
+
+  .item {
+    margin: 0;
+  }
+}
+
+/* Mobile Nav */
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #24252A;
+  overflow-x: hidden;
+  transition: all 0.5s ease 0s;
+}
+
+.overlay-content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: all 0.2s ease 0s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #a9a9a9;
+}
+
+.overlay .menu-close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  cursor: pointer;
+}
+
+/* The css below fixes the bootstrap x on the menu close */
+a:not([href]):not([tabindex]) {
+    color: #A03333;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+
+  .overlay, .menu-close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+/* Banner */
+
+#banner {
+  background-image: linear-gradient(to bottom right, #a02828, #a02d2d, #a03332, #a03737, #a03c3c);
+  grid-area: banner;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15vh;
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.banner-text {
+  min-width: 75%;
+  max-width: 90%;
+  background-color: rgba(160, 51, 51, 0);
+  text-align: center;
+  border: 2px #edf0f1 solid;
+  padding: 15px;
+}
+
+@media (max-width: 800px) {
+  #banner {
+  font-size: 4rem;
+  }
+}
+
+/* About Section */
+
+#louisiana-logo {
+  max-height: 400px;
+  margin: 10% auto;
+}
+
+@media (max-width: 1075px) {
+  #louisiana-logo {
+    margin: 10vh auto 0 auto;
+  }
+
+  .two-column {
+      padding-bottom: 7.5vh;
+  }
+}
+
+@media (min-width: 1200px) {
+  #louisiana-logo {
+    margin: 15% auto 0 auto;
+  }
+}
+
+@media (min-width: 1500px) {
+  #louisiana-logo {
+    margin: 10% auto;
+  }
+}
+
+@media (min-width: 2000px) {
+  #about-title {
+    text-align: center;
+  }
+
+  #about-text {
+    margin: 0 0 0 15%;
+  }
+
+  #louisiana-logo {
+    margin: 7% auto;
+  }
+
+  .item {
+    padding-bottom: 10vh;
+  }
+}
+
+/* Services Section */
+
+#services {
+  grid-area: services;
+  display: grid;
+  grid-template-areas:
+  "services-title services-title "
+  "service-1      service-2  ";
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  background-color: #A03333;
+  padding: 15vh 3em;
+  grid-column-gap: 8rem;
+}
+
+#services-title {
+  grid-area: services-title;
+  margin: 0 auto 2rem auto;
+  height: auto;
+  background-color: #A03333;
+}
+
+#services-title h2 {
+  background-color: #A03333;
+}
+
+.service {
+  padding: 2rem;
+  border: 4px #24252A solid;
+  border-radius: 10px;
+  background-color: #A03333;
+  box-shadow: 8px 6px 10px black;
+  margin-bottom: 3em;
+}
+
+#service-1 {
+  grid-area: service-1;
+}
+
+#service-2 {
+  grid-area: service-2;
+}
+
+
+.service h3{
+  display: table;
+  border-collapse: collapse;
+  margin: auto;
+  background-color: #A03333;
+  font-size: 2em;
+  margin-bottom: 0.75em;
+  border-bottom: 2px solid;
+  border-spacing: 2px;
+}
+
+.service p {
+  background-color: #A03333;
+  font-size: 2rem;
+  padding-bottom: 0.5em;
+}
+
+@media (max-width: 800px) {
+  #services {
+  grid-template-areas:
+  "services-title"
+  "service-1"
+  "service-2";
+  grid-template-columns: auto;
+  }
+}
+
+/* Contact Section */
+
+#contact {
+  grid-area: contact;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  align-content: space-between;
+}
+
+.contact-item {
+  text-align: center;
+  margin-right: 15%;
+  border: 1px #a03333 solid;
+}
+
+.mapouter {
+  text-align: center;
+  height:400px;
+  width:400px;
+  margin: 10% auto 3em auto;
+  }
+
+.gmap_canvas {
+  overflow: hidden;
+  background:none!important;
+  height:400px;
+  width:400px;
+}
+
+#location-contact-text {
+
+}
+
+#location-contact-text h2 {
+  padding: 0;
+  margin-bottom: 0.5em;
+}
+
+
+@media (max-width: 1100px) {
+    #location-contact-text {
+      margin: 0 auto 10vh auto;
+  }
+}
+
+@media (min-width: 1800px), (max-width: 1100px) {
+  #location-contact-text {
+    text-align: center;
+  }
+
+  .contact-item {
+    margin: auto;
+  }
+}
+
+@media (min-width: 2000px) {
+  #location-contact-text {
+    margin-left: 15%;
+  }
+}
+
+/* Apply Form */
+
+body {
+  background-color: #A03333;
+}
+
+#filler {
+  height: 15vh;
+}
+
+#application-form {
+  padding: 15vh 10vw;
+  z-index: 20;
+  background-color: #A03333;
+}
+
+form, .form-group, legend, input, label, .asteriskField {
+  background-color: #A03333;
+  width: 100%;
+}
+
+.form-group > div {
+  background-color: #A03333;
+}
+
+.btn-outline-dark {
+  border-width: 2px;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+legend {
+  font-size: 4rem;
+}
+
+.col-form-label {
+  font-size: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+#app-download, #app-download * {
+  background-color: #A03333;
+}
+
+#app-download a {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+#app-download a:hover {
+  color: #a9a9a9;
+}
+
+#position-select {
+  margin: 0 auto;
+  background-color: #A03333;
+  height: 100vh;
+  text-align: center;
+}
+
+#position-select p {
+  font-size: 3rem;
+  background-color: inherit;
+  margin-top: 10vh;
+}
+
+.app-route-link {
+  font-size: 2.5rem;
+  margin: auto;
+  padding: 1.5rem;
+  border: 1px #24252A solid;
+  background-color: transparent;
+  width: 70%;
+}
+
+#position-select a:hover {
+  color: #a9a9a9;
+}
+
+
+@media (max-width: 450px) {
+  #position-select p {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  legend {
+    font-size: 3rem;
+  }
+
+  #position-select p {
+    font-size: 2.5rem;
+  }
+
+  .app-route-link {
+    font-size: 1.5rem;
+  }
+}
+
+/* success message fix */
+.alert {
+  margin: 0;
+}
+
+/* Thank you page */
+
+#thank_you{
+  height: 100vh;
+  overflow-y: hidden;
+  background-color: #A03333;
+  margin: 15vh auto 0 auto;
+  text-align: center;
+  color: white;
+}
+
+#thank_you p {
+  background-color: #A03333;
+  font-size: 2rem;
+}
