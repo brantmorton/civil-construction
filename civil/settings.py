@@ -32,6 +32,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     '45.79.35.110',
+    'www.cccesi.com',
+    'cccesi.com'
 ]
 
 
