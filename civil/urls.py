@@ -28,9 +28,12 @@ urlpatterns = [
     path('apply/laborer/', apply_views.apply_laborer, name='apply-laborer'),
     path('apply/operator/', apply_views.apply_operator, name='apply-operator'),
     path('', HomePage.as_view(), name='home-page'),
-    url(r'^tinymce/', include('tinymce.urls')),
-    path('thanks/', ThankYouPage.as_view(), name='thank-you')
+    path('thanks/', ThankYouPage.as_view(), name='thank-you'),
+
+    # this is needed to utilize tinymce
+    url(r'^tinymce/', include('tinymce.urls'))
 ]
 
+# Media files in debug mode
 if settings.DEBUG is True:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

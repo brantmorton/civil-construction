@@ -1,6 +1,19 @@
 
 from django.db import models
 
+"""
+
+    There will be two possible jobs, a Laborer and an Operator.
+    Each job application allows for the submission of:
+        - last name
+        - first name
+        - email
+        - resume (not required)
+        - completed job application
+        - date submitted (inherent)
+        
+"""
+
 
 class Laborer(models.Model):
     last_name = models.CharField(max_length=100)

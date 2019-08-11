@@ -14,15 +14,13 @@ import os
 import json
 from django.contrib.messages import constants as messages
 
+# loads in config file for sensitive data
 with open('/etc/config.json') as config_file:
     config = json.load(config_file)
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+# Building path to the base directory
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config['SECRET_KEY']
@@ -33,7 +31,7 @@ DEBUG = False
 ALLOWED_HOSTS = [
     '45.79.35.110',
     'www.cccesi.com',
-    'cccesi.com'
+    'cccesi.com',
 ]
 
 
@@ -94,9 +92,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'civil.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -152,6 +147,8 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
+
+# To send emails
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '465'

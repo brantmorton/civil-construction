@@ -49,6 +49,7 @@ p {
   padding: 15vh 10px;
   min-height: 500px;
 }
+/*******************/
 
 /* Navbar */
 
@@ -121,6 +122,7 @@ button:hover {
     margin: 0;
   }
 }
+/***************/
 
 /* Mobile Nav */
 
@@ -162,6 +164,7 @@ button:hover {
   font-size: 60px;
   cursor: pointer;
 }
+/*****************/
 
 /* The css below fixes the bootstrap x on the menu close */
 a:not([href]):not([tabindex]) {
@@ -179,9 +182,9 @@ a:not([href]):not([tabindex]) {
     right: 35px;
   }
 }
+/*****************/
 
 /* Banner */
-
 #banner {
   background-image: linear-gradient(to bottom right, #a02828, #a02d2d, #a03332, #a03737, #a03c3c);
   grid-area: banner;
@@ -254,9 +257,9 @@ a:not([href]):not([tabindex]) {
     padding-bottom: 10vh;
   }
 }
+/*****************/
 
 /* Services Section */
-
 #services {
   grid-area: services;
   display: grid;
@@ -325,9 +328,9 @@ a:not([href]):not([tabindex]) {
   grid-template-columns: auto;
   }
 }
+/*****************/
 
 /* Contact Section */
-
 #contact {
   grid-area: contact;
   display: grid;
@@ -386,9 +389,9 @@ a:not([href]):not([tabindex]) {
     margin-left: 15%;
   }
 }
+/*****************/
 
 /* Apply Form */
-
 body {
   background-color: #A03333;
 }
@@ -489,14 +492,15 @@ legend {
     font-size: 1.5rem;
   }
 }
+/*****************/
 
 /* success message fix */
 .alert {
   margin: 0;
 }
+/*****************/
 
 /* Thank you page */
-
 #thank_you{
   height: 100vh;
   overflow-y: hidden;
@@ -510,3 +514,4 @@ legend {
   background-color: #A03333;
   font-size: 2rem;
 }
+/*****************/
